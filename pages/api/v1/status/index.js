@@ -1,4 +1,4 @@
-import databases from "../../../../infra/databases.js";
+import databases from "infra/databases.js";
 
 async function status(request, response) {
   response.status(200).json({ Chave: "Testes" });
