@@ -4,13 +4,14 @@
   "description": "Um projeto para aprender programação Curso.Dev",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "start:docker": "docker compose -f infra/compose.yaml up -d",
-    "kill:docker": "docker compose -f infra/compose.yaml down"
+    "services:up": "docker compose -f infra/compose.yaml up -d",
+    "services:down": "docker compose -f infra/compose.yaml down",
+    "services:stop": "docker compose -f infra/compose.yaml stop"
   },
   "author": "",
   "license": "MIT",
